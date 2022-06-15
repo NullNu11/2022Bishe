@@ -1,0 +1,19 @@
+<!--pages/barometer/barometer.wxml-->
+<view class="chart-container">
+  <view class="line-block">
+    <view class="title">心情表</view>
+    <!-- 注释为旧版的晴雨表
+    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas"></canvas>-->
+
+    <canvas canvas-id="newCanvas" disable-scroll="true" class="canvas"></canvas>
+  </view> 
+
+
+  <view class="mood-block">
+    <!--  -->
+    <!-- <view class="mood-desc">您的好心情占比为<text>{{good}}</text></view> -->
+    <more-func></more-func>
+  </view>
+  <!-- 占位 -->
+  <view class="holder"></view>
+</view>
