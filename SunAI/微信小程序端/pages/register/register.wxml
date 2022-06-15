@@ -1,0 +1,28 @@
+<view class="big_back"> 
+
+
+  <form bindsubmit="handlerSubmit" class="body">
+  <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+  <image class="avatar" src="{{avatarUrl}}"></image>
+</button> 
+<view class="background"></view>
+<view class="form_label">
+<view style="flex-direction:column;">
+<text class="labelText">sunAI</text>
+<view class="line"></view>
+<text class="descText">先来介绍一下自己吧</text>
+
+ <!--昵称-->
+ <text class="labelNickname">个人说明</text>
+  <input class="inputNickname" type="nickname" placeholder="个人说明" name="nickName" /> 
+ <!--账号-->
+ <text class="labelNumber">昵称</text>
+  <input class="inputAccount" placeholder="请输入昵称" name="account" /> 
+ 
+ <!--按钮-->
+  <button class="regBtn" type="info" form-type="submit">注册</button> 
+ 
+</view>
+</view>
+ </form>
+</view>

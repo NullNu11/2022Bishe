@@ -1,0 +1,7 @@
+/* pages/Recommend/Articles/2/2.wxss */
+image {
+  margin-left: 80rpx;
+}
+.text{
+  font-size: 50rpx;
+}

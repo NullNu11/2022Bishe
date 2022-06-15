@@ -1,0 +1,29 @@
+<!-- pages/home/home.wxml -->
+<!-- <view>
+  <view class="head">心情标签</view>
+  <view>
+    <input class="inputData" maxlength="15" bindinput="inputData" placeholder="{{hinttext}}" />
+  </view>
+  <view class="lable">
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_happy">快乐</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_excited">激动</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_sad">难过</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_angry">愤怒</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_miserable">平和</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_afraid">害怕</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_worried">忧愁</view> 
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_frustrated">失意</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_satisfied">满足</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_ecstatic">狂喜</view>
+  </view>
+</view>
+<view class="submit" bindtap="savetag">保存今日打卡记录</view>
+<text class="clear" bindtap="clear">清除</text>-->
+<van-toast id="van-toast" /> 
+<view class="text">请从下图中滑动选出符合当前情绪的位置</view>
+<canvas canvas-id="canvas" class="canvas" bindtouchmove="move"/>
+<view class="location">X:{{x}}</view>
+<view class="locationy">Y:{{y}}</view>
+
+<view class="submit" bindtap="savetag">确定</view>
+

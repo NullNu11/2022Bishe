@@ -1,0 +1,102 @@
+/* pages/home/home.wxss */
+
+page {
+    background: rgb(187, 224, 237);
+}
+.canvas {
+    position: absolute;
+    width: 720rpx;
+    height: 70%;
+    top: 0%;
+    left: 0%;
+  }
+  .text{
+      margin-top: 5%;
+      margin-left: 3%;
+      margin-right: 3%;
+      font-size: 50rpx;
+      color: lemonchiffon;
+
+  }
+  .location{
+    position: absolute;
+    top: 57%;
+    left: 80%;
+  }
+  .locationy{
+    position: absolute;
+    top: 60%;
+    left: 80%;
+  }
+.head {
+    display: flex;
+    font-size: 25px;
+    font-style: blod;
+    font-family: "黑体";
+    color: #539DB6;
+    margin-top: 20%;
+    align-items: center;
+    justify-content: center;
+}
+.wea{
+    width: 200rpx;
+    height: 200rpx;
+    background-color: rgb(224, 155, 26);
+}
+.inputData {
+    background-color: rgb(253, 253, 250);
+    width: 80%;
+    height: 300rpx;
+    margin: 10% 10%;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: #539DB6;
+    padding-left: 5%;
+    font-size: 40rpx;
+}
+
+.lable {
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.lable>view {
+    width: 140rpx;
+    height: 60rpx;
+    color: #3C5E5C;
+    background-color: #FFE5B4;
+    display: inline-table;
+    justify-content: center;
+    margin: 10rpx;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #eef1f1;
+    padding-left: 6%;
+    padding-top: 1%;
+}
+
+.submit {
+    width: 140rpx;
+    height: 100rpx;
+    color: ivory;
+    padding: 0;
+    padding-top: 4%;
+    padding-left: 5%;
+    margin: 85% 40%;
+    margin-bottom: 0;
+    background-color: #539DB6;
+    border-radius: 20px;
+}
+
+.lable>view:active {
+    background-color: rgb(238, 152, 39);
+    transition-duration: 10ms;
+}
+
+
+.clear{
+    margin-left: 45%;
+    text-decoration: underline;
+}
