@@ -1,0 +1,85 @@
+{
+  "pages": [
+    
+    "pages/home/home", "pages/list/list",
+    "pages/echart/echart","pages/register/register",
+    "pages/barometer/barometer",
+    "pages/newrecords/records",
+    "pages/my/feedback/feedback",
+    "pages/music/music",
+    "pages/Motiontest/Testend/Testend",
+    "pages/registers/register",
+    "pages/integral/integral",
+    "pages/records/records",
+    "pages/my/my",
+    "pages/rank/rank",
+    "pages/statement/statement",
+    "custom-tab-bar/index",
+    "pages/Recommend/Recommend",
+    "pages/Recommend/Articles/1/1",
+    "pages/Motiontest/Motiontest",
+    "pages/Moreinfo/Moreinfo",
+    "pages/Motiontest/Questions/Questions",
+    "pages/Moreinfo/Info/Info",
+    "pages/points/points",
+    "pages/my/collect/collect",
+    "pages/my/mychange/mychange",
+    "pages/Recommend/Articles/2/2",
+    "pages/Recommend/Articles/3/3",
+    "pages/Recommend/Articles/4/4",
+    "pages/Recommend/Articles/5/5",
+    "pages/Recommend/Articles/6/6"
+    
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 15000,
+    "downloadFile": 15000
+  },
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "tabBar": {
+    "custom": false,
+    "color": "#000000",
+    "selectedColor": "#BBE0ED",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/assets/tabbar/home.png",
+        "selectedIconPath": "/assets/tabbar/home-selected.png"
+      },
+      {
+        "pagePath": "pages/barometer/barometer",
+        "text": "晴雨表",
+        "iconPath": "/assets/tabbar/bar.png",
+        "selectedIconPath": "/assets/tabbar/bar-selected.png"
+      },
+      {
+        "pagePath": "pages/integral/integral",
+        "text": "积分",
+        "iconPath": "/assets/tabbar/integral.png",
+        "selectedIconPath": "/assets/tabbar/integral-selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/assets/tabbar/my.png",
+        "selectedIconPath": "/assets/tabbar/my-selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
