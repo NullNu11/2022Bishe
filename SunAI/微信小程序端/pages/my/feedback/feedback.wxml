@@ -1,0 +1,26 @@
+<!--pages/my/feedback/feedback.wxml-->
+<!-- <view>
+    <input class="inputData" maxlength="50" bindinput="inputData" placeholder="请输入反馈" value="{{comment}}" />
+</view> -->
+<view class="background">
+    <image
+        src="https://sunai.oss-cn-beijing.aliyuncs.com/music/%E4%BA%94%E8%A1%8C%E9%9F%B3%E4%B9%90/%E5%AE%AB%E8%B0%83%E9%9F%B3%E4%B9%90/AlbumArt_%7BB5020207-474E-4720-FB3F-432A3FEF2200%7D_Small.jpg">
+    </image>
+    <view class="music_name">评价</view>
+</view>
+<view class="comment">
+    <view class="first">
+        <view>为您当前的心情打分</view>
+        <van-rate value="{{value.feel}}" allow-half void-icon="star" void-color="#eee" bind:change="onChange_feel" />
+    </view>
+    <van-radio-group value="{{ radio }}" bind:change="onChange" direction="horizontal">
+        <view>您喜欢当前推荐的音乐吗</view>
+        <view class="nextLine"></view>
+        <van-radio name="1">喜欢</van-radio>
+        <van-radio name="2">一般</van-radio>
+        <van-radio name="3">不喜欢</van-radio>
+    </van-radio-group>
+   
+</view>
+<view class="submit" bindtap="submitBtn">-----提交反馈-----</view>
+<van-toast id="van-toast" />

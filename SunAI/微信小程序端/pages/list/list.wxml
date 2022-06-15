@@ -1,0 +1,20 @@
+<!--pages/list/list.wxml-->
+<view class="body">
+  <view wx:for="{{list}}" class="list" >
+    <image src="{{item.avator}}" class="avator" data-id="{{index}}" bindtap="onclick"></image>
+    <view class="name">{{item.name}}</view>
+    <view class="time">{{item.time}}</view>
+    <view class="text">{{item.text}}</view>
+    <view class="dia" wx:if="{{item.show}}">    我就是弹窗啊</view>
+    <view wx:for="{{item.image}}" class="image{{item.count}}">
+      <image src="{{item}}" class="image"></image>
+    </view>
+    <view class="icon">
+      <van-icon name="good-job-o" size="50rpx" info="{{zan}}" />
+      <van-icon name="chat-o" size="50rpx" bindtap="chat" data-id="{{index}}"/>
+      <van-icon name="ellipsis" size="50rpx" />
+    </view>
+  </view>
+
+</view>
+

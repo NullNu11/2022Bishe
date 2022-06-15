@@ -1,0 +1,240 @@
+/**index.wxss**/
+page {
+  background-color: #BBE0ED;
+
+}
+
+.item {
+  border: 1rpx solid rgb(240, 240, 240);
+  height: 110rpx;
+  padding: 10rpx;
+  background-color: rgb(250, 250, 250);
+  margin-top: 0rpx;
+}
+
+.name {
+  font-size: 35rpx;
+  padding-top: 3rpx;
+  padding-left: 80rpx;
+}
+
+.author {
+  padding-top: 10rpx;
+  padding-left: 80rpx;
+  font-size: 20rpx;
+  color: rgba(102, 98, 98, 0.767);
+}
+
+.type {
+  font-size: 30rpx;
+  float: right;
+  padding-right: 50rpx;
+  margin-top: -60rpx;
+  columns: #807c7c;
+}
+
+.type>van-icon {
+  margin-left: 40rpx;
+
+}
+
+.head {
+  margin-left: 150rpx;
+  font-size: 50rpx;
+  margin-top: 40rpx;
+}
+
+.head1 {
+  margin-left: 150rpx;
+  font-size: 40rpx;
+  margin-bottom: 60rpx;
+}
+
+.function>van-icon,
+.function>view {
+  float: left;
+  margin-left: 20rpx;
+}
+
+.suiji {
+  float: left;
+}
+
+.function {
+  background-color: rgb(250, 250, 250);
+  border-radius: 20rpx;
+  font-size: 32rpx;
+  height: 110rpx;
+  margin-bottom: -40rpx;
+  padding-top: 10rpx;
+}
+
+.all {
+  margin-right: 320rpx;
+}
+
+.index {
+  float: left;
+  margin-top: 23rpx;
+  margin-left: 25rpx;
+}
+
+.active {
+  background: #FFFF00;
+  color: #fff;
+}
+
+.background-pic {
+  position: flex;
+  width: 100%;
+  height: 600rpx;
+}
+
+.choise {
+  font-size: 50rpx;
+  margin-left: 12%;
+}
+
+.choise_sure {
+  width: 150rpx;
+  font-size: 40rpx;
+  margin-left: 40%;
+  margin-top: 20%;
+  color: #fff;
+  background-color: #F5DEB3;
+  border-radius: 40rpx;
+}
+
+.pass {
+  margin-left: 45%;
+}
+
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: rgb(187, 224, 237);
+}
+
+.background .info_name {
+  position: fixed;
+  top: 140rpx;
+  left: 0;
+  right: 0;
+  font-size: 23pt;
+  color: #353535;
+  border-color: orange;
+  border: 10rpx;
+}
+
+ul>li {
+  display: inline-block;
+  width: 150rpx;
+  height: 150rpx;
+  background-color: #fff;
+  border-radius: 300rpx;
+  margin-left: 4%;
+  margin-top: 2%;
+  text-align: center;
+  line-height: 450%;
+}
+.class_effect{
+  background-color: #4ea8db;
+}
+.background .info_author {
+  position: fixed;
+  top: 240rpx;
+  left: 0;
+  right: 0;
+  font-size: 15pt;
+  color: #353535;
+  border-color: orange;
+  border: 10rpx;
+}
+
+
+.background .list {
+  position: fixed;
+  left: 50rpx;
+  top: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.comment {
+  position: fixed;
+  right: 70rpx;
+  top: 60rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.background .poster {
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+  margin-top: 400rpx;
+  border: 50rpx;
+}
+
+.rotate {
+  animation: rotate 20s linear infinite;
+}
+
+.rotate-paused {
+  animation: rotate 20s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progress {
+  position: fixed;
+  bottom: 90rpx;
+  left: 50rpx;
+  right: 50rpx;
+  display: flex;
+  align-items: center;
+  font-size: 10pt;
+  color: rgb(87, 49, 49);
+  text-align: center;
+}
+
+
+.progress .bar {
+  flex: 1;
+}
+
+.progress text {
+  flex-basis: 90rpx;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 20rpx;
+  left: 50rpx;
+  right: 50rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons .button {
+  width: 70rpx;
+  height: 70rpx;
+}

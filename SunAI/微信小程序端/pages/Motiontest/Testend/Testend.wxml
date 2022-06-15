@@ -1,0 +1,14 @@
+<!--pages/Motiontest/Testend/Testend.wxml-->
+<view class="end-box">
+  <view class="end-state">{{endstate}}{{score}}，{{testresult}}.</view>
+  <view class="back">
+    <view class="hhhh">你可以选择：</view>
+    <navigator url="pages/Motiontest/Testend" bindtap='music' class='music'>
+      <view >听音乐</view>
+    </navigator>
+    <navigator url="pages/Motiontest/Testend" bindtap='getRecommend' class='article'>
+      <view >看文章</view>
+    </navigator>
+    <view class="hhhh">{{keep}}</view>
+  </view>
+</view>

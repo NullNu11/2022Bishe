@@ -1,0 +1,8 @@
+<!--pages/my/mychange/mychange.wxml-->
+
+
+<view >
+  <textarea class="inputData" maxlength="80" bindinput="inputData" placeholder="请输入个性签名" value="{{intro}}" />
+</view>
+<view class="submit" bindtap="submitBtn">-----提交-----</view>
+<van-toast id="van-toast" />

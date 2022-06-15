@@ -1,0 +1,42 @@
+<!-- pages/home/home.wxml -->
+<!-- <view>
+  <view class="head">心情标签</view>
+  <view>
+    <input class="inputData" maxlength="15" bindinput="inputData" placeholder="{{hinttext}}" />
+  </view>
+  <view class="lable">
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_happy">快乐</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_excited">激动</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_sad">难过</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_angry">愤怒</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_miserable">平和</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_afraid">害怕</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_worried">忧愁</view> 
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_frustrated">失意</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_satisfied">满足</view>
+    <view class="" selectable="false" space="false" decode="false" bindtap="mood_ecstatic">狂喜</view>
+  </view>
+</view>
+<view class="submit" bindtap="savetag">保存今日打卡记录</view>
+<text class="clear" bindtap="clear">清除</text>-->
+
+<van-toast id="van-toast" />
+<view class="text">请选择您的情绪状态和心情</view>
+
+<view class="awake {{awake==(index+1)?'class_awake':''}}" wx:for="{{awake_img}}">
+  <image src="{{item.name}}"></image>
+</view>
+
+<view class="slider" style="margin-bottom:10%">
+  <van-slider value="50" bind:drag="onChange" bar-height="4px" active-color="yellow" />
+</view>
+<!-- <view class="text">请选择您的心情</view> -->
+
+<view class="effect {{effect==(index+1)?'class_effect':''}}" wx:for="{{effect_img}}">
+  <image src="{{item.name}}"></image>
+</view>
+<view class="slider">
+  <van-slider value="50" bind:drag="onChange_effect" bar-height="4px" active-color="bule" />
+</view>
+<button class="submit" bindtap="savetag">提交</button>
+

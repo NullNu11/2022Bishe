@@ -1,0 +1,52 @@
+/* pages/list/list.wxss */
+.body{
+  background-color: rgb(240, 240, 240);
+}
+.list{
+  margin-bottom: 20rpx;
+  background-color: rgb(255, 255, 255);
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.avator{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.name{
+  margin-left: 110rpx;
+  margin-top: -85rpx;
+}
+
+.time{
+  margin-left: 550rpx;
+  margin-top: -40rpx;
+  color: rgba(107, 109, 110, 0.897);
+  font-size: 25rpx;
+  margin-bottom: 50rpx;
+}
+.text{
+  margin: 20rpx;
+}
+.image{
+  margin: 20rpx;
+}
+.icon{
+  margin-left: 90rpx;
+}
+van-icon{
+  margin-right: 200rpx;
+  margin-bottom: 20rpx;
+}
+
+.image1{
+  margin-left: 200rpx;
+}
+.dia{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: rgb(175, 171, 171);
+  display: inline;
+}

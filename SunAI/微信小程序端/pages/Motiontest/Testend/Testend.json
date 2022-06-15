@@ -1,0 +1,10 @@
+{
+  "usingComponents": { "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"},
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "情绪测试",
+  "navigationBarTextStyle": "black",
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

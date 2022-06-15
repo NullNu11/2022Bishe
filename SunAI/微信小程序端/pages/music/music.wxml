@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view wx:if="{{!first}}">
+  <p class="choise">请选择你喜欢的音乐标签</p>
+  <van-divider />
+  <ul wx:for="{{mood}}" wx:key="*this" >
+    <li bindtap="choise_mood" data-id="{{index}}"  class="{{mood[index].choise?'class_effect':''}}">{{item.data}}
+    </li>
+  </ul>
+  <button class="choise_sure" bindtap="choise_sure">确定</button>
+  <p class="pass" bindtap="pass">清除</p>
+</view>
+
+
+
+<view class="container" wx:if="{{first}}">
+  <text class="head"> 根据您的情绪</text>
+  <text class="head1"> 晴天AI推荐您听以下歌曲</text>
+  <view class="function">
+    <van-icon name="play-circle-o" size="45rpx" />
+    <view class="all" bindtap='listClick' data-pos='0'>全部播放</view>
+    <view bindtap="order">
+      <view wx:if="{{order}}">
+        <van-icon name="descending" size="45rpx" class="suiji" />
+        <view data-pos='0' class="suiji"> 顺序播放</view>
+      </view>
+      <view wx:else>
+        <van-icon name="exchange" size="45rpx" class="suiji" />
+        <view data-pos='0' class="suiji">随机播放</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{showList}}" class="list">
+    <view wx:for="{{audioList}}" class='item {{audioIndex==index?"active":""}}' bindtap='listClick' data-pos='{{index}}'
+      wx:key="index">
+      <view class="index">{{index+1}}</view>
+      <view class="name">{{item.name}}</view>
+      <view class="author">{{item.author}}</view>
+      <view class="type">
+        <van-icon name="play-circle-o" size="45rpx" />
+        <van-icon name="like-o" size="45rpx" catchtap="icon" color="{{color}}" />
+      </view>
+    </view>
+  </view>
+
+  <view wx:else class='background'>
+    <view class='info_name'>
+      <view>{{audioList[audioIndex].name||""}}</view>
+    </view>
+    <view class='info_author'>
+      <view>{{audioList[audioIndex].author||""}}</view>
+    </view>
+
+    <!-- <image class='list' bindtap='pageChange' src='../src/images/list.png'></image> -->
+    <van-icon class='list' bindtap='pageChange' name="wap-nav" size='70rpx' />
+
+    <!-- <van-icon name="comment-o" class='comment' bindtap='comment' size='80rpx' info=" " /> -->
+    <image class='poster {{playStatus?"rotate":"rotate-paused"}}' mode="scaleToFill"
+      src='{{audioList[audioIndex].image_url}}'></image>
+    <view class='progress'>
+      <text>{{progressText}}</text>
+      <slider class='bar' bindchange="sliderChange" bindchanging="sliderChanging" value="{{progress}}" step="1" min='0'
+        max='{{duration}}' activeColor="#1aad19" block-size="12" block-color="#1aad19" />
+      <text>{{durationText}}</text>
+    </view>
+    <view class='buttons'>
+      <!-- <image class='button' bindtap='lastMusic' src='../src/images/last.png'></image> -->
+      <van-icon name="arrow-left" class='button' bindtap='lastMusic' size='70rpx' />
+      <!-- <image class='button' bindtap='playOrpause' src='{{playStatus?"../src/images/pause.png":"../src/images/play.png"}}'> 
+      </image>-->
+      <van-icon wx:if="{{!playStatus}}" name="play" class='button' bindtap='playOrpause' size='80rpx' />
+      <van-icon wx:if="{{playStatus}}" name="pause" class='button' bindtap='playOrpause' size='80rpx' />
+      <!-- <image class='button' bindtap='nextMusic' src='../src/images/next.png'></image> -->
+      <van-icon name="arrow" class='button' bindtap='nextMusic' size='70rpx' />
+
+    </view>
+  </view>
+</view>

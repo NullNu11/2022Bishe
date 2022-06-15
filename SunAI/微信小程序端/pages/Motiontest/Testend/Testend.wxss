@@ -1,0 +1,84 @@
+/* pages/Motiontest/Testend/Testend.wxss */
+page{
+  background-color:#BBE0ED;
+}
+.end-box{
+  margin-top:5%;
+  display:flex;
+  margin-left:7%;
+  width: 85%;
+  height: 70%;
+  border-radius: 45rpx;
+  background-color: rgb(255, 255, 255);
+  color:#539DB6;
+  justify-content:center;
+  flex-direction: column;
+  border: 5rpx solid #539DB6;
+}
+.end-state{
+  margin-left:5%;
+  margin-top:10%;
+  margin-bottom:3%;
+  margin-right:5%;
+  align-items:center;
+  display:flex;
+  font-size: 50rpx;
+  justify-content:center;
+  flex-direction: row;
+  font-family: Arial;
+  font-weight:600;
+  white-space:pre-wrap;
+  color:#539DB6;
+}
+
+.music{
+  padding-top:2%;
+  display:flex;
+  margin-left:15%;
+  margin-top:10%;
+  width: 70%;
+  height: 110rpx;
+  border-radius: 50rpx;
+  background-color: rgba(83, 157, 182);
+  color: rgba(255, 255, 255);
+  font-size: 50rpx;
+  justify-content:center;
+  flex-direction: row;
+  font-family: Arial;
+  border: 5rpx solid rgba(255, 255, 255);
+  font-weight:600;
+  box-shadow: 0 10rpx 10rpx rgba(28, 92, 122,0.5);
+}
+.article{
+  padding-top:2%;
+  display:flex;
+  margin-left:15%;
+  margin-top:5%;
+  width: 70%;
+  height: 110rpx;
+  border-radius: 50rpx;
+  background-color: rgba(83, 157, 182);
+  color: rgba(255, 255, 255);
+  font-size: 50rpx;
+  justify-content:center;
+  flex-direction: row;
+  font-family: Arial;
+  border: 5rpx solid rgba(255, 255, 255);
+  font-weight:600;
+  box-shadow: 0 10rpx 10rpx rgba(28, 92, 122,0.5);
+}
+
+
+.back{
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+  font-size: 50rpx;
+  font-family: Arial;
+  font-weight:600;
+}
+
+
+.hhhh{
+  margin-left: 55rpx;
+  margin-top: 30rpx;
+}

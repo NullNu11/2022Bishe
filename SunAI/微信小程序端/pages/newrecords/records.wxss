@@ -1,0 +1,139 @@
+/* pages/home/home.wxss */
+
+page {
+    background: rgb(187, 224, 237);
+}
+.canvas {
+    position: absolute;
+    width: 720rpx;
+    height: 70%;
+    top: 0%;
+    left: 0%;
+  }
+.slider{
+    margin-right: 80rpx;
+    margin-left: 80rpx;
+    margin-top: 10%;
+  }
+  .text{
+      margin-top: 5%;
+      margin-left: 13%;
+      margin-right: 3%;
+      font-size: 50rpx;
+      color: rgb(250, 243, 183);
+
+  }
+.awake{
+    margin-top: 10%;
+    display: inline-block;
+}
+.class_effect{
+    border:#483bff;
+    border-style:solid;
+    border-width:1px; 
+}
+.class_awake{
+    border:#fbff1e;
+    border-style:solid;
+    border-width:2px; 
+}
+.active{
+    font-size: 50rpx;
+}
+.effect{
+    margin-top: 10%;
+    display: inline-block;
+}
+image{
+    width: 100rpx;
+    height: 140rpx;
+    margin-left: 5rpx;
+    top: 55%;
+    left: 3%;
+}
+
+  .location{
+    position: absolute;
+    top: 57%;
+    left: 80%;
+  }
+  .locationy{
+    position: absolute;
+    top: 60%;
+    left: 80%;
+  }
+.head {
+    display: flex;
+    font-size: 25px;
+    font-style: blod;
+    font-family: "黑体";
+    color: #539DB6;
+    margin-top: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputData {
+    background-color: rgb(253, 253, 250);
+    width: 80%;
+    height: 300rpx;
+    margin: 10% 10%;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: #539DB6;
+    padding-left: 5%;
+    font-size: 40rpx;
+}
+
+.lable {
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.lable>view {
+    width: 140rpx;
+    height: 60rpx;
+    color: #3C5E5C;
+    background-color: #FFE5B4;
+    display: inline-table;
+    justify-content: center;
+    margin: 10rpx;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #eef1f1;
+    padding-left: 6%;
+    padding-top: 1%;
+}
+
+.submit {
+    margin-top: 80rpx;
+    background-color: wheat;
+    border-radius: 100rpx;
+    width: 90%;
+    margin-left: 5%;
+    font-size: 40rpx;
+
+}
+.block{
+    background-color: #dddddd;
+    height: 140rpx;
+    width: 100rpx;
+}
+
+.lable>view:active {
+    background-color: rgb(238, 152, 39);
+    transition-duration: 10ms;
+}
+
+
+.good{
+    position: absolute;
+    top: 55%;
+    left: 85%;
+}
+.clear{
+    margin-left: 45%;
+    text-decoration: underline;
+}
