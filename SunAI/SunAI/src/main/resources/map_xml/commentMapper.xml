@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.helloworld.mapper.commentMapper">
+    <insert id="add_comment">
+            <selectKey keyProperty="comment_id" resultType="int" order="BEFORE">
+                select IFNULL(max(comment_id),0)+1 from tj_comment
+            </selectKey>
+            insert into tj_comment(comment_id,user_id,time,comment,music_id)
+            values (#{comment_id},#{user_id},#{time},#{comment},#{music_id})
+        </insert>
+</mapper>

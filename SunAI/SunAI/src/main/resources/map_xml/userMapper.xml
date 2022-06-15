@@ -1,0 +1,51 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.helloworld.mapper.userMapper">
+
+    <insert id="register">
+        insert into tj_user(user_id,user_name,user_number,open_id,institude,avatar,point)
+        values (#{user_id}, #{user_name}, #{user_number}, #{open_id},#{institude},#{avatar},#{point})
+    </insert>
+
+    <select id="login_User" resultType="tj_User">
+        select *
+        from tj_user
+        where open_id = (#{id})
+    </select>
+
+    <update id="change_name">
+        update tj_user
+        set user_name=(#{name})
+        where user_id = (#{id})
+    </update>
+
+    <update id="change_introd">
+        update tj_user
+        set introduction=(#{intro})
+        where user_id = (#{id})
+    </update>
+    <update id="update_point_add">
+        update tj_user
+        set point=point+(#{newPoint})
+        where user_id = (#{id})
+    </update>
+
+    <delete id="delete_user">
+        delete
+        from tj_user
+        where user_id = (#{id})
+    </delete>
+    
+    <select id="topthree" resultType="tj_User">
+        SELECT user_name,avatar,point FROM tj_user order by point desc limit #{a}
+    </select>
+
+    <select id="findall" resultType="int">
+        select count(*) from tj_user
+    </select>
+    
+    <select id="find_all_users" resultType="tj_user">
+        select * from tj_user
+    </select>
+</mapper>

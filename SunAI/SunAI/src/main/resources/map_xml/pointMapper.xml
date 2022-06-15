@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.helloworld.mapper.pointMapper">
+    <update id="update_Point">
+        update tj_user set point=point+(#{newPoint}) where user_id=(#{id})
+
+
+
+
+
+
+
+    </update>
+</mapper>

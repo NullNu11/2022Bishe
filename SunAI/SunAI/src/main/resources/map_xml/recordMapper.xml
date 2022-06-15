@@ -1,0 +1,32 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.helloworld.mapper.recordMapper">
+    <insert id="addrecord" >
+        <selectKey keyProperty="record_id" resultType="int" order="BEFORE">
+            select IFNULL(max(record_id),0)+1 from tj_record
+        </selectKey>
+        insert into tj_record(record_id,user_id,x_mood,y_mood,weather,update_time)
+        values (#{record_id},#{user_id},#{x_mood},#{y_mood},#{weather},#{update_time})
+    </insert>
+
+    <select id="search_today" resultType="int">
+        select record_id from tj_record where  update_time like concat(#{today},'%') and user_id=#{user_id}
+    </select>
+
+    <update id="update_record">
+        update tj_record set record_data=#{data},update_time=#{update_time} where record_id=#{record_id}
+    </update>
+    <select id="search_record" resultType="tj_record">
+        select * from tj_record where user_id=#{id}
+    </select>
+    <delete id="delete_record">
+           delete from tj_record where user_id=#{id} and update_time like concat(#{delete_date},'%')
+    </delete>
+    <select id="findall" resultType="int">
+        select count(*) from tj_record
+    </select>
+    <select id="find_max" resultType="String">
+        select record_data from tj_record where record_id=(select max(record_id)  from tj_record where user_id=#{user_id})
+    </select>
+</mapper>

@@ -1,0 +1,42 @@
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <package name="com.example.helloworld.enity"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://121.43.117.133:3306/mysql?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=GMT%2B8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true"/>
+<!--                jdbc:mysql://localhost:3306/数据库名称?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=GMT%2B8&amp;useSSL=false-->
+                <property name="username" value="root"/>
+                <property name="password" value="sunAImima1*"/>
+<!--                <property name="basePackage" value="com.example.helloworld.enity"/>-->
+<!--                <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>-->
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper class="com.example.helloworld.mapper.SendMapper"/>
+        <mapper resource="SendMapper.xml"></mapper>
+        <mapper class="com.example.helloworld.mapper.userMapper"/>
+        <mapper resource="map_xml/userMapper.xml"></mapper>
+        <mapper class="com.example.helloworld.mapper.pointMapper"/>
+        <mapper resource="map_xml/pointMapper.xml"></mapper>
+        <mapper class="com.example.helloworld.mapper.questionMapper"/>
+        <mapper resource="map_xml/questionMapper.xml"></mapper>
+        <mapper class="com.example.helloworld.mapper.recordMapper"/>
+        <mapper resource="map_xml/recordMapper.xml"></mapper>
+        <mapper class="com.example.helloworld.mapper.giftMapper"/>
+        <mapper resource="map_xml/giftMapper.xml"></mapper>
+        <mapper resource="map_xml/musicMapper.xml"></mapper>
+        <mapper class="com.example.helloworld.mapper.commentMapper"/>
+        <mapper resource="map_xml/commentMapper.xml"></mapper>
+    </mappers>
+
+</configuration>
+

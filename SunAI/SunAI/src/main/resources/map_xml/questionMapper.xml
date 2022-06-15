@@ -1,0 +1,51 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.helloworld.mapper.questionMapper">
+    <insert id="add_question">
+        <selectKey keyProperty="question_id" resultType="int" order="BEFORE">
+            select IFNULL(max(question_id),0)+1 from tj_question
+        </selectKey>
+        insert into
+        tj_question(question_id,question_data,question_type,answer_6points,answer_5points,answer_4points,answer_3points,answer_2points,answer_1points,answer_0points)
+        values (#{question_id},#{data},#{type},#{point6},#{point5},#{point4},#{point3},#{point2},#{point1},#{point0})
+    </insert>
+
+    <delete id="delete_question">
+        delete
+        from tj_question
+        where question_type = #{type}
+    </delete>
+
+    <select id="search_question" resultType="tj_question">
+        select *
+        from tj_question
+        where questionnaire_id = #{type} order by question_id
+    </select>
+
+    <insert id="add_answer">
+        <selectKey keyProperty="answer_id" resultType="int" order="BEFORE">
+            select IFNULL(max(answer_id),0)+1 from question_answer
+        </selectKey>
+        insert into question_answer(answer_id,user_id,question_id,update_time,answer_data,questionnaire_id,answer_point)
+         values (#{answer_id},#{user_id},#{question_id},#{update_time},#{answer_data},#{questionnaire_id},#{answer_point})
+    </insert>
+
+    <select id="search_answer" resultType="question_answer">
+        select * from question_answer where user_id=#{id}
+
+    </select>
+
+    <delete id="delete_answer">
+        delete from question_answer where user_id=#{user_id} and update_time like concat((#{datetime}),'%')
+    </delete>
+
+<!--     讲真改我是真的觉得没啥用-->
+     <select id="search_questionnaire" resultType="tj_questionnaire">
+         select * from tj_questionnaire
+     </select>
+
+    <select id="find_today" resultType="int">
+        select count(*) from question_answer where user_id=#{user_id} and update_time like concat((#{datetime}),'%')
+    </select>
+</mapper>

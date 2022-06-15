@@ -1,0 +1,9 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.helloworld.mapper.musicMapper">
+  <select id="search_music" resultType="tj_music">
+      select * from tj_music where type=#{type}
+  </select>
+</mapper>

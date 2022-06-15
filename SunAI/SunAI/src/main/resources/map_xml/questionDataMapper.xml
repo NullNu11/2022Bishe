@@ -1,0 +1,26 @@
+    <!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.helloworld.mapper.questionMapper">
+    <insert id="add_question">
+        <selectKey keyProperty="question_id" resultType="int" order="BEFORE">
+            select IFNULL(max(question_id),0)+1 from tj_question
+        </selectKey>
+        insert into
+        tj_Question(question_id,question_data,question_type,answer_6points,answer_5points，answer_4points，answer_3points，answer_2points，answer_1points，answer_0points)
+        values (#{question_id},#{data},#{type},#{point6},#{point5}，#{point4}，#{point3}，#{point2}，#{point1}，#{point0})
+    </insert>
+
+    <delete id="delete_question">
+        delete
+        from tj_question
+        where question_type = #{type}
+    </delete>
+
+    <select id="search_question" resultType="tj_question">
+        select *
+        from tj_question
+        where question_type = #{type}
+    </select>
+</mapper>
+
